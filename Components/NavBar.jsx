@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 function NavBar() {
   return (
     <nav className='flex sm:w-375 h-[56px] lg:w-1120px items-center box-border shrink-0 py-2 border-b sm:py-4 m-0 lg:justify-center lg:flex'>
       <div className='w-full flex justify-between items-center sm:px-4 lg:justify-start lg:w-auto'>
-        <img className=" justify-center items-center gap-1 px-4 lg:pr-0" src='/reelImg.png' alt="" />
+        <Link href="/"><img className=" justify-center items-center gap-1 px-4 lg:pr-0" src='/reelImg.png' alt="" /></Link>
         <div className='flex items-center gap-4 px-4 '>
           <button className='flex justify-center items-center gap-2.5 rounded border-none	bg-[#FFA724] text-base font-semibold	px-4 py-1.5 lg:hidden'>Get started</button>
           <img className='lg:hidden' src="/hamburger.png" alt="" />
@@ -24,7 +25,7 @@ function NavBar() {
       </div>
       <div className='flex'>
         <button className='hidden lg:block text-sm/[16px] rounded border border-black ml-4 py-1.5 font-semibold px-4'>Login</button>
-        <button className='hidden lg:block text-sm/[16px] rounded bg-[#FFA724] font-semibold px-4 ml-4 '>Signup</button>
+        <button className='hidden lg:block text-sm/[16px] rounded bg-[#FFA724] font-semibold px-4 ml-4'><Link href='/UserSignIn/SignInWithEmail'>Signup</Link></button>
 
 
       </div>
